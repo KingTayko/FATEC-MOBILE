@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtMain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+
+        android:fontFamily="sans-serif-black"
+        android:text="Primeira Lei de Ohm"
+        android:textSize="34sp"
+
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edtPrimeiroNumero"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+
+        android:hint=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+        app:layout_constraintTop_toBottomOf="@+id/txtMain"
+        app:layout_constraintBottom_toTopOf="@+id/edtSegundoNumero"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edtSegundoNumero"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+
+        android:hint=""
+        android:ems="10"
+        android:inputType="numberDecimal"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtPrimeiroNumero"
+
+        />
+
+    <Button
+        android:id="@+id/btnCalcCorrente"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:layout_marginEnd="4dp"
+
+        android:backgroundTint="#03A9F4"
+
+        android:text="Corrente"
+        app:layout_constraintEnd_toStartOf="@+id/btnCalcResistencia"
+
+        app:layout_constraintTop_toBottomOf="@+id/edtSegundoNumero" />
+
+    <Button
+        android:id="@+id/btnCalcResistencia"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+
+        android:backgroundTint="#03A9F4"
+
+        android:text="Resistência"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSegundoNumero" />
+
+    <Button
+        android:id="@+id/btnCalcTensao"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="108dp"
+
+        android:backgroundTint="#03A9F4"
+
+        android:text="Tensão"
+        app:layout_constraintStart_toEndOf="@+id/btnCalcResistencia"
+        app:layout_constraintTop_toBottomOf="@+id/edtSegundoNumero" />
+
+    <Button
+        android:id="@+id/btnCalcResultado"
+
+        android:layout_width="160dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="12dp"
+
+        android:backgroundTint="#03A9F4"
+        android:text="CALCULAR"
+
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCalcResistencia" />
+
+    <TextView
+        android:id="@+id/txtResp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="#4CAF50"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnCalcResistencia"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edtSegundoNumero" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
