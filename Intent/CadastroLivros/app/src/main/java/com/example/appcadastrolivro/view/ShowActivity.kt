@@ -23,17 +23,18 @@ class ShowActivity : AppCompatActivity() {
 
         val btnVoltar = findViewById<Button>(R.id.btn_voltar)
 
-        if(livro.toString().isEmpty()||autor.toString().isEmpty()){
-            Toast.makeText(this,"Dados Insuficientes", Toast.LENGTH_SHORT).show()
-        }else{
+        if (livro.toString().isEmpty() || autor.toString().isEmpty()) {
+            Toast.makeText(this, "Dados Insuficientes", Toast.LENGTH_SHORT).show()
+        } else {
             textLivro.text = livro
             textAutor.text = autor
-        }
 
-        btnVoltar.setOnClickListener {
-            finish()
+
+            btnVoltar.setOnClickListener {
+                finish()
+            }
+
         }
 
     }
-
 }
