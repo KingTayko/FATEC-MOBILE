@@ -26,16 +26,28 @@ class LoginAdmin : AppCompatActivity() {
         binding.btnLogar.setOnClickListener {
             val login = binding.edtLogin.text.toString()
             val senha = binding.edtSenha.text.toString()
-            val admin = Admin(login,senha)
+            val admin = Admin(login, senha)
             val administrador = viewModel.logarAdmin(admin)
-            Toast.makeText(this, administrador, Toast.LENGTH_SHORT).show()
+            //mensagem de texto
 
-            binding.edtLogin.setText("")
-            binding.edtSenha.setText("")
 
-            val rv = Intent(this, RecyclerView::class.java)
-            startActivity(rv)
 
+            // Verifica se o login foi bem-sucedido
+            if (administrador == "Administrador logado") {
+                // Exibe uma mensagem de sucesso e abre a nova Activity
+                Toast.makeText(this, administrador, Toast.LENGTH_SHORT).show()
+
+                // Limpando os campos
+                binding.edtLogin.setText("")
+                binding.edtSenha.setText("")
+
+                // Aciona o Intent para a RecyclerView
+                val rv = Intent(this, RecyclerView::class.java)
+                startActivity(rv)
+            } else {
+                // Exibe mensagem de erro se o login falhar
+                Toast.makeText(this, administrador, Toast.LENGTH_SHORT).show()
+            }
+        }
     }
-}
 }

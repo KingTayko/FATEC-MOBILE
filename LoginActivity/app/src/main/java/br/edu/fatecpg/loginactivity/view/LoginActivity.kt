@@ -30,11 +30,15 @@ class LoginActivity : AppCompatActivity() {
             val senha = binding.edtSenha.text.toString()
             val user = Usuario(login,senha)
             val retorno = viewModel.logar(user)
-            Toast.makeText(this, retorno, Toast.LENGTH_SHORT).show()
+            if(retorno=="Login realizado com sucesso!") {
+                Toast.makeText(this, retorno, Toast.LENGTH_SHORT).show()
 
-            binding.edtLogin.setText("")
-            binding.edtSenha.setText("")
-
+                binding.edtLogin.setText("")
+                binding.edtSenha.setText("")
+            }
+            else{
+                Toast.makeText(this, retorno, Toast.LENGTH_SHORT).show()
+            }
 
         //logar
         }

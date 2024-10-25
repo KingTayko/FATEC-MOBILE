@@ -25,7 +25,7 @@
         android:id="@+id/btn_logar"
         android:layout_width="138dp"
         android:layout_height="57dp"
-        android:layout_marginEnd="36dp"
+        android:layout_marginEnd="24dp"
         android:text="Logar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/btn_cadastrar"
