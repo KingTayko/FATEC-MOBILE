@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:id="@+id/txv_titulo_main"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:minHeight="20sp"
+
+        android:layout_marginTop="40dp"
+        android:padding="10sp"
+
+        android:text="Título"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txv_titulo"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="20sp"
+
+        android:padding="10sp"
+
+        android:textAlignment="center"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_titulo_main" />
+
+    <TextView
+        android:id="@+id/txv_diretor_main"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:minHeight="20sp"
+
+        android:layout_marginTop="40dp"
+        android:padding="10sp"
+
+        android:text="Diretor"
+        android:textAlignment="center"
+        android:textSize="25sp"
+        android:textStyle="bold"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_titulo" />
+
+    <TextView
+        android:id="@+id/txv_diretor"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+
+        android:minHeight="20sp"
+        android:padding="10sp"
+
+        android:textAlignment="center"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txv_diretor_main"
+         />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
