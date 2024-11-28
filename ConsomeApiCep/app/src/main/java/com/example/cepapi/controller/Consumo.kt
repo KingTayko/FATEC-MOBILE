@@ -1,9 +1,7 @@
 package com.example.cepapi.controller
 
-import java.net.URI
-import java.net.http.HttpClient
-import java.net.http.HttpRequest
-import java.net.http.HttpResponse
+import com.google.firebase.crashlytics.buildtools.reloc.org.apache.http.client.HttpClient
+
 
 class Consumo {
 
